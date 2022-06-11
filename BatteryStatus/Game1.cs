@@ -1,10 +1,15 @@
-using System;
+#if WINDOWS
+using System.Windows.Forms;
 
+#else
+using System;
 using Microsoft.Xna;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Samples;
 using Microsoft.Xna.Samples.BatteryStatus;
+#endif
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
 
 namespace Microsoft.Xna.Samples.BatteryStatus
 {
@@ -17,12 +22,13 @@ namespace Microsoft.Xna.Samples.BatteryStatus
         SpriteBatch spriteBatch;		
 		SpriteFont font;
 
-		public Game1()
+        public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 			
-			graphics.IsFullScreen = true;		
+			graphics.IsFullScreen = true;
+
         }
 
         /// <summary>
@@ -69,12 +75,19 @@ namespace Microsoft.Xna.Samples.BatteryStatus
            	graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
 			
 			spriteBatch.Begin();
-	
-			spriteBatch.DrawString(font,"[Battery Status]\n" + PowerStatus.BatteryChargeStatus,new Vector2(10,100),Color.Black);
+
+#if WINDOWS
+            var powerStatus = SystemInformation.PowerStatus;
+#else
+            var powerStatus = PowerStatus;
+#endif
+
+
+            spriteBatch.DrawString(font,"[Battery Status]\n" + powerStatus.BatteryChargeStatus,new Vector2(10,100),Color.Black);
 			
-			spriteBatch.DrawString(font,"[PowerLine Status]\n" + PowerStatus.PowerLineStatus,new Vector2(10,200),Color.Black);
+			spriteBatch.DrawString(font,"[PowerLine Status]\n" + powerStatus.PowerLineStatus,new Vector2(10,200),Color.Black);
 			
-			spriteBatch.DrawString(font,"Charge: " + PowerStatus.BatteryLifePercent+"%",new Vector2(10,300),Color.Black);
+			spriteBatch.DrawString(font,"Charge: " + powerStatus.BatteryLifePercent+"%",new Vector2(10,300),Color.Black);
 		
 			spriteBatch.End();
 			
