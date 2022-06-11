@@ -17,6 +17,5 @@ namespace Microsoft.Xna.Samples.BouncingBox
 			base.Update (gameTime);
 		}
 
-		ove
 	}
 }

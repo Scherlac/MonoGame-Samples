@@ -8,6 +8,8 @@ using MonoTouch.UIKit;
 
 namespace Microsoft.Xna.Samples.BouncingBox
 {
+#if ! WINDOWS
+
 #if MONOMAC
 	class Program
 	{
@@ -61,4 +63,20 @@ namespace Microsoft.Xna.Samples.BouncingBox
 		}
 	}
 #endif
+#else
+	/// <summary>
+	/// The main entry point for the application.
+	/// </summary>
+	static class Program
+	{
+		static void Main()
+		{
+			using (var game = new Game1())
+			{
+				game.Run();
+			}
+		}
+	}
+#endif
+
 }
