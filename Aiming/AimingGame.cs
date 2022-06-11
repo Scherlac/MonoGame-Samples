@@ -12,11 +12,11 @@ using System;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.GamerServices;
+//using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
-using Microsoft.Xna.Framework.Storage;
+//using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 
@@ -90,8 +90,9 @@ namespace Aiming
 #else
             graphics.PreferredBackBufferWidth = 320;
             graphics.PreferredBackBufferHeight = 480;
+            graphics.HardwareModeSwitch = false;
 #endif
-			graphics.IsFullScreen = true;
+            graphics.IsFullScreen = true;
         }
 
 

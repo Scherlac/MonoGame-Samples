@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionSampleWin", "CollisionSample\CollisionSampleWin.csproj", "{D4973D30-9B29-4DCE-92B0-83C3F6482760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aiming", "Aiming\Aiming.csproj", "{4EF7B7AB-8284-4EAD-AAD2-3CB0EC8DDE58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4973D30-9B29-4DCE-92B0-83C3F6482760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4973D30-9B29-4DCE-92B0-83C3F6482760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4973D30-9B29-4DCE-92B0-83C3F6482760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4973D30-9B29-4DCE-92B0-83C3F6482760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF7B7AB-8284-4EAD-AAD2-3CB0EC8DDE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF7B7AB-8284-4EAD-AAD2-3CB0EC8DDE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF7B7AB-8284-4EAD-AAD2-3CB0EC8DDE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF7B7AB-8284-4EAD-AAD2-3CB0EC8DDE58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFEB1693-2A63-4DCC-8D11-EDABD54B5C24}
+	EndGlobalSection
+EndGlobal

@@ -47,7 +47,7 @@ namespace CollisionSample
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            spriteFont = content.Load<SpriteFont>("content\\Font");
+            spriteFont = content.Load<SpriteFont>("Content/Font");
         }
 
         /// <summary>
