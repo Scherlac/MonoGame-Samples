@@ -1,12 +1,16 @@
+#if !WINDOWS
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 using MonoMac.AppKit;
 using MonoMac.Foundation;
+#endif
 
 namespace BloomPostprocess
 {
+#if !WINDOWS
 	static class Program
 	{
 		/// <summary>
@@ -39,7 +43,22 @@ namespace BloomPostprocess
 		{
 			return true;
 		}
-	}  
+	}
+#else
+	/// <summary>
+	/// The main entry point for the application.
+	/// </summary>
+	static class Program
+	{
+		static void Main()
+		{
+			using (var game = new BloomPostprocessGame())
+			{
+				game.Run();
+			}
+		}
+	}
+#endif
 }
 
 
